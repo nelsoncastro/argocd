@@ -8,5 +8,5 @@ namespace: goapp
 
 images:
 - name: goapp
-  newName: goapp
+  newName: nelsoncastrodeveloper/argocd
   newTag: v1
