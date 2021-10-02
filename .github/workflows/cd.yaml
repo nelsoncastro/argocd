@@ -1,0 +1,18 @@
+name: CD
+on:
+  push:
+    branches: [main]
+job:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: actions/checkoutt@v2
+
+      - name: build imahe and push to docker hub
+        uses: docker/build-push-action@v1.1.0
+        with:
+          username: nelsoncastrodeveloper
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: nelsoncastrodeveloper/goapp:latest
+          tags: ${{ github.sha }}, latest
