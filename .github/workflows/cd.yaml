@@ -7,9 +7,10 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
-      - name: actions/checkoutt@v2
+      - name: checkout
+        uses: actions/checkoutt@v2
 
-      - name: build imahe and push to docker hub
+      - name: build image and push to docker hub
         uses: docker/build-push-action@v1.1.0
         with:
           username: nelsoncastrodeveloper
