@@ -16,4 +16,4 @@ jobs:
           username: nelsoncastrodeveloper
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: nelsoncastrodeveloper/goapp:latest
-          tags: ${{ github.sha }}, latest
+          tags: ${{ github.sha }}
